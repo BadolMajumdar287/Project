@@ -5,7 +5,7 @@
  */
 
 
-
+import { userModel } from "../model/user.model.js";
 
 
 export const userCreate = async (req,res) => {
