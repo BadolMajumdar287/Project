@@ -3,6 +3,7 @@ import { config } from "dotenv";
 import { userRouter } from "./router/user.router.js";
 import { userRouterDetail } from "./router/user.router.detail.js";
 import { userGetByIdRouter } from "./router/user.get.id.router.js";
+import { userUpdateRouter } from "./router/user.update.router.js";
 import { DatabaseConfig } from "./config/user.config.js";
 
 
@@ -13,6 +14,7 @@ app.use(express.json());
 app.use("/user",userRouter);
 app.use("/userDetail",userRouterDetail);
 app.use("/userGet",userGetByIdRouter);
+app.use("/userUpdate",userUpdateRouter);
 DatabaseConfig();
 
 
