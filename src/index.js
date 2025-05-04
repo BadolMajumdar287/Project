@@ -1,7 +1,8 @@
 import express from "express";
 import { config } from "dotenv";
 import { userRouter } from "./router/user.router.js";
-import { userDetailRouter } from "./router/user.detail.router.js";
+import { userRouterDetail } from "./router/user.router.detail.js";
+import { userGetByIdRouter } from "./router/user.get.id.router.js";
 import { DatabaseConfig } from "./config/user.config.js";
 
 
@@ -10,7 +11,8 @@ const PORT = process.env.PORT;
 const app = express();
 app.use(express.json());
 app.use("/user",userRouter);
-app.use("/user/detail",userDetailRouter);
+app.use("/userDetail",userRouterDetail);
+app.use("/userGet",userGetByIdRouter);
 DatabaseConfig();
 
 
